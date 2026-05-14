@@ -67,7 +67,10 @@ public class Main extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        PrivacyCase privacyCase = new PrivacyCase("Data Leak Case", "Company exposed user emails publicly.", "Personal Data", "1");
+        privacyCase.verdict = new Verdict("Data Leak Case", "Unethical", "User data was shared without consent.");
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
