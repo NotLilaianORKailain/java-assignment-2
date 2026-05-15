@@ -25,14 +25,25 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nicetabheader = new javax.swing.JPanel();
+        niceTabHeader = new javax.swing.JPanel();
         uselessbutton1 = new javax.swing.JRadioButton();
         uselessbutton2 = new javax.swing.JRadioButton();
         exit = new javax.swing.JButton();
         uselessbutton3 = new javax.swing.JRadioButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
-        title = new javax.swing.JLabel();
+        title1 = new javax.swing.JLabel();
+        scenario = new javax.swing.JLabel();
+        infoForUser = new javax.swing.JPanel();
+        title2 = new javax.swing.JLabel();
+        catergory = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        ethical = new javax.swing.JRadioButton();
+        unethical = new javax.swing.JRadioButton();
+        userReason = new javax.swing.JPanel();
+        title4 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,11 +80,11 @@ public class Frame2 extends javax.swing.JFrame {
         jTextPane2.setText("https://wwvv.notavirus.com/embed/ASYIfd?feature=fileloop");
         jScrollPane2.setViewportView(jTextPane2);
 
-        javax.swing.GroupLayout nicetabheaderLayout = new javax.swing.GroupLayout(nicetabheader);
-        nicetabheader.setLayout(nicetabheaderLayout);
-        nicetabheaderLayout.setHorizontalGroup(
-            nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nicetabheaderLayout.createSequentialGroup()
+        javax.swing.GroupLayout niceTabHeaderLayout = new javax.swing.GroupLayout(niceTabHeader);
+        niceTabHeader.setLayout(niceTabHeaderLayout);
+        niceTabHeaderLayout.setHorizontalGroup(
+            niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(uselessbutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -84,13 +95,13 @@ public class Frame2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        nicetabheaderLayout.setVerticalGroup(
-            nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(nicetabheaderLayout.createSequentialGroup()
+        niceTabHeaderLayout.setVerticalGroup(
+            niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(niceTabHeaderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(exit)
                         .addComponent(uselessbutton1)
                         .addComponent(uselessbutton2)
@@ -98,8 +109,113 @@ public class Frame2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        title.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        title.setText("Scenario");
+        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        title1.setText("Scenario #");
+
+        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        scenario.setText("<num> caseTitle");
+
+        title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        title2.setText("categorY:");
+
+        catergory.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        catergory.setText("categorY");
+
+        jTextField1.setText("jTextField1");
+
+        ethical.setText("Ethical");
+        ethical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ethicalActionPerformed(evt);
+            }
+        });
+
+        unethical.setText("Unethical");
+        unethical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unethicalActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
+        infoForUser.setLayout(infoForUserLayout);
+        infoForUserLayout.setHorizontalGroup(
+            infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(infoForUserLayout.createSequentialGroup()
+                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(infoForUserLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jTextField1))
+                    .addGroup(infoForUserLayout.createSequentialGroup()
+                        .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(infoForUserLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(infoForUserLayout.createSequentialGroup()
+                                .addGap(144, 144, 144)
+                                .addComponent(ethical)
+                                .addGap(47, 47, 47)
+                                .addComponent(unethical)))
+                        .addGap(0, 138, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        infoForUserLayout.setVerticalGroup(
+            infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infoForUserLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(title2)
+                    .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ethical)
+                    .addComponent(unethical))
+                .addGap(138, 138, 138))
+        );
+
+        title4.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        title4.setText("Reason:");
+
+        jTextField2.setText("jTextField1");
+
+        jButton1.setText("SUBMIT");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout userReasonLayout = new javax.swing.GroupLayout(userReason);
+        userReason.setLayout(userReasonLayout);
+        userReasonLayout.setHorizontalGroup(
+            userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField2))
+            .addGroup(userReasonLayout.createSequentialGroup()
+                .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userReasonLayout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jButton1))
+                    .addGroup(userReasonLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(title4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 192, Short.MAX_VALUE))
+        );
+        userReasonLayout.setVerticalGroup(
+            userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userReasonLayout.createSequentialGroup()
+                .addComponent(title4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(36, 36, 36))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,21 +224,36 @@ public class Frame2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(niceTabHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nicetabheader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nicetabheader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -143,6 +274,18 @@ public class Frame2 extends javax.swing.JFrame {
     private void uselessbutton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton3ActionPerformed
 
     }//GEN-LAST:event_uselessbutton3ActionPerformed
+
+    private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ethicalActionPerformed
+
+    private void unethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unethicalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_unethicalActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,13 +323,24 @@ public class Frame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel catergory;
+    private javax.swing.JRadioButton ethical;
     private javax.swing.JButton exit;
+    private javax.swing.JPanel infoForUser;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JPanel nicetabheader;
-    private javax.swing.JLabel title;
+    private javax.swing.JPanel niceTabHeader;
+    private javax.swing.JLabel scenario;
+    private javax.swing.JLabel title1;
+    private javax.swing.JLabel title2;
+    private javax.swing.JLabel title4;
+    private javax.swing.JRadioButton unethical;
     private javax.swing.JRadioButton uselessbutton1;
     private javax.swing.JRadioButton uselessbutton2;
     private javax.swing.JRadioButton uselessbutton3;
+    private javax.swing.JPanel userReason;
     // End of variables declaration//GEN-END:variables
 }
