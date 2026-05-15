@@ -7,13 +7,13 @@
  *
  * @author 343479150
  */
-public class MisinfomationCase extends EthicsCase{
+public class MisinformationCase extends EthicsCase{
     // all declared var from UML
     private String mediaType;
 
     
     // child class constructor of each MISINFOMATION case object
-    public MisinfomationCase(String caseTitle, String description, String category, String mediaType){
+    public MisinformationCase(String caseTitle, String description, String category, String mediaType){
         super(caseTitle, description, category);
         this.mediaType = mediaType;
     }

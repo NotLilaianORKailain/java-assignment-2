@@ -8,12 +8,25 @@
  * @author 343479150
  */
 public class Frame1 extends javax.swing.JFrame {
+    public static EthicsCase array[] = new EthicsCase [8];
 
     /**
      * Creates new form Frame1
      */
     public Frame1() {
         initComponents();
+            array[0] = new PrivacyCase("Privacy Case", "The Always-On Microphone", 
+            "audio recordings", "A smart speaker company recorded household conversations"
+                     + " even when the device was not activated. Employees reviewed the recordings.");
+            array[1] = new AlgorithmCase("Algorithm Case", "The Biased Hiring Bot", 
+                    "gender bias", "A tech company's AI screening tool ranked male applicants "
+                    + "higher than equally qualified female applicants.");
+            array[2] = new MisinformationCase("Misinformation Case", "The Deepfake Politician", 
+                    "deepfake video", "A deepfake video of a candidate saying things they never "
+                    + "said spread widely online during an election before being identified as fake.");
+            array[3] = new IntellectualPropertyCase("Intellectual Property Case", "AI Trained on Artist Work", 
+                    "AI-generated art", "An AI image generator was trained on millions of artworks "
+                    + "scraped without permission. Artists receive no credit or payment.");
     }
 
     /**
