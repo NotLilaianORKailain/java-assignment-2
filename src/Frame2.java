@@ -25,21 +25,124 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nicetabheader = new javax.swing.JPanel();
+        uselessbutton1 = new javax.swing.JRadioButton();
+        uselessbutton2 = new javax.swing.JRadioButton();
+        exit = new javax.swing.JButton();
+        uselessbutton3 = new javax.swing.JRadioButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        title = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        uselessbutton1.setText(" ");
+        uselessbutton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uselessbutton1ActionPerformed(evt);
+            }
+        });
+
+        uselessbutton2.setText(" ");
+        uselessbutton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uselessbutton2ActionPerformed(evt);
+            }
+        });
+
+        exit.setBackground(new java.awt.Color(255, 153, 153));
+        exit.setText("X"); // NOI18N
+        exit.setToolTipText("");
+        exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitActionPerformed(evt);
+            }
+        });
+
+        uselessbutton3.setText(" ");
+        uselessbutton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uselessbutton3ActionPerformed(evt);
+            }
+        });
+
+        jTextPane2.setText("https://wwvv.notavirus.com/embed/ASYIfd?feature=fileloop");
+        jScrollPane2.setViewportView(jTextPane2);
+
+        javax.swing.GroupLayout nicetabheaderLayout = new javax.swing.GroupLayout(nicetabheader);
+        nicetabheader.setLayout(nicetabheaderLayout);
+        nicetabheaderLayout.setHorizontalGroup(
+            nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nicetabheaderLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(uselessbutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(uselessbutton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(uselessbutton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        nicetabheaderLayout.setVerticalGroup(
+            nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(nicetabheaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, nicetabheaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(exit)
+                        .addComponent(uselessbutton1)
+                        .addComponent(uselessbutton2)
+                        .addComponent(uselessbutton3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        title.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        title.setText("Scenario");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(nicetabheader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nicetabheader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(220, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void uselessbutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton1ActionPerformed
+
+    }//GEN-LAST:event_uselessbutton1ActionPerformed
+
+    private void uselessbutton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton2ActionPerformed
+
+    }//GEN-LAST:event_uselessbutton2ActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void uselessbutton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton3ActionPerformed
+
+    }//GEN-LAST:event_uselessbutton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,5 +180,13 @@ public class Frame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exit;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JPanel nicetabheader;
+    private javax.swing.JLabel title;
+    private javax.swing.JRadioButton uselessbutton1;
+    private javax.swing.JRadioButton uselessbutton2;
+    private javax.swing.JRadioButton uselessbutton3;
     // End of variables declaration//GEN-END:variables
 }
