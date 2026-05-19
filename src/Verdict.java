@@ -14,7 +14,7 @@ public class Verdict {
     private String reason;
     
     public Verdict() {
-        this.caseName = "idk";
+        this.caseName = "";
         this.reason = "idk again";
         this.studentVerdict = "still dunno";
     }
@@ -25,13 +25,13 @@ public class Verdict {
         this.reason = reason;
     }
     
-    public void setCaseName() {
+    public void setCaseName(String caseName) {
     this.caseName = caseName;
     }
     public String getCaseName() {
       return caseName;
     }
-    public void setReason() {
+    public void setReason(String reason) {
         this.reason = reason;
     }
     
@@ -39,7 +39,7 @@ public class Verdict {
         return reason;
     }
     
-    public void setStudentVerdict() {
+    public void setStudentVerdict(String studentVerdict) {
         this.studentVerdict = studentVerdict;
     }
     
