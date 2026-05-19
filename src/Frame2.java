@@ -38,9 +38,10 @@ public class Frame2 extends javax.swing.JFrame {
         infoForUser = new javax.swing.JPanel();
         title2 = new javax.swing.JLabel();
         catergory = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         ethical = new javax.swing.JRadioButton();
         unethical = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         userReason = new javax.swing.JPanel();
         title3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -108,13 +109,16 @@ public class Frame2 extends javax.swing.JFrame {
         catergory.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         catergory.setText("categorY");
 
-        jTextField1.setText("jTextField1");
-
         buttonGroup1.add(ethical);
         ethical.setText("Ethical");
 
         buttonGroup1.add(unethical);
         unethical.setText("Unethical");
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
         infoForUser.setLayout(infoForUserLayout);
@@ -131,11 +135,11 @@ public class Frame2 extends javax.swing.JFrame {
                         .addGap(144, 144, 144)
                         .addComponent(ethical)
                         .addGap(47, 47, 47)
-                        .addComponent(unethical)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(infoForUserLayout.createSequentialGroup()
-                .addGap(0, 20, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(unethical))
+                    .addGroup(infoForUserLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
         infoForUserLayout.setVerticalGroup(
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,8 +149,8 @@ public class Frame2 extends javax.swing.JFrame {
                     .addComponent(title2)
                     .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ethical)
                     .addComponent(unethical))
@@ -247,8 +251,9 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JButton exit;
     private javax.swing.JPanel infoForUser;
     private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JPanel niceTabHeader;
