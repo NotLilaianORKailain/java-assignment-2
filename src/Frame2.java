@@ -113,6 +113,11 @@ public class Frame2 extends javax.swing.JFrame {
 
         buttonGroup1.add(ethical);
         ethical.setText("Ethical");
+        ethical.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ethicalActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(unethical);
         unethical.setText("Unethical");
@@ -209,7 +214,18 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if (ethical.isSelected()) {
+            Frame1.ethicalcount++;
+        } else {
+            Frame1.unethicalcount++;
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ethicalActionPerformed
 
     /**
      * @param args the command line arguments
