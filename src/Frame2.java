@@ -59,6 +59,7 @@ public class Frame2 extends javax.swing.JFrame {
 
         uselessbutton3.setText(" ");
 
+        jTextPane2.setEditable(false);
         jTextPane2.setText("https://wwvv.notavirus.com/embed/ASYIfd?feature=fileloop");
         jScrollPane2.setViewportView(jTextPane2);
 
@@ -122,22 +123,19 @@ public class Frame2 extends javax.swing.JFrame {
             .addGroup(infoForUserLayout.createSequentialGroup()
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jTextField1))
+                        .addContainerGap()
+                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(infoForUserLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(infoForUserLayout.createSequentialGroup()
-                                .addGap(144, 144, 144)
-                                .addComponent(ethical)
-                                .addGap(47, 47, 47)
-                                .addComponent(unethical)))
-                        .addGap(0, 138, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(144, 144, 144)
+                        .addComponent(ethical)
+                        .addGap(47, 47, 47)
+                        .addComponent(unethical)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(infoForUserLayout.createSequentialGroup()
+                .addGap(0, 20, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         infoForUserLayout.setVerticalGroup(
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,9 +171,6 @@ public class Frame2 extends javax.swing.JFrame {
         userReason.setLayout(userReasonLayout);
         userReasonLayout.setHorizontalGroup(
             userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField2))
             .addGroup(userReasonLayout.createSequentialGroup()
                 .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(userReasonLayout.createSequentialGroup()
@@ -184,7 +179,11 @@ public class Frame2 extends javax.swing.JFrame {
                     .addGroup(userReasonLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 192, Short.MAX_VALUE))
+                .addGap(0, 196, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         userReasonLayout.setVerticalGroup(
             userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
