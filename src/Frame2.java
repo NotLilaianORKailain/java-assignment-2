@@ -25,6 +25,7 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         niceTabHeader = new javax.swing.JPanel();
         uselessbutton1 = new javax.swing.JRadioButton();
         uselessbutton2 = new javax.swing.JRadioButton();
@@ -41,41 +42,22 @@ public class Frame2 extends javax.swing.JFrame {
         ethical = new javax.swing.JRadioButton();
         unethical = new javax.swing.JRadioButton();
         userReason = new javax.swing.JPanel();
-        title4 = new javax.swing.JLabel();
+        title3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         uselessbutton1.setText(" ");
-        uselessbutton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uselessbutton1ActionPerformed(evt);
-            }
-        });
 
         uselessbutton2.setText(" ");
-        uselessbutton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uselessbutton2ActionPerformed(evt);
-            }
-        });
 
         exit.setBackground(new java.awt.Color(255, 153, 153));
         exit.setText("X"); // NOI18N
         exit.setToolTipText("");
-        exit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitActionPerformed(evt);
-            }
-        });
 
         uselessbutton3.setText(" ");
-        uselessbutton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                uselessbutton3ActionPerformed(evt);
-            }
-        });
 
         jTextPane2.setText("https://wwvv.notavirus.com/embed/ASYIfd?feature=fileloop");
         jScrollPane2.setViewportView(jTextPane2);
@@ -109,11 +91,15 @@ public class Frame2 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(niceTabHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 494, -1));
+
         title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         title1.setText("Scenario #");
+        getContentPane().add(title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 47, 126, 33));
 
         scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
         scenario.setText("<num> caseTitle");
+        getContentPane().add(scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 47, 305, 33));
 
         title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title2.setText("categorY:");
@@ -123,19 +109,11 @@ public class Frame2 extends javax.swing.JFrame {
 
         jTextField1.setText("jTextField1");
 
+        buttonGroup1.add(ethical);
         ethical.setText("Ethical");
-        ethical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ethicalActionPerformed(evt);
-            }
-        });
 
+        buttonGroup1.add(unethical);
         unethical.setText("Unethical");
-        unethical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unethicalActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
         infoForUser.setLayout(infoForUserLayout);
@@ -177,8 +155,10 @@ public class Frame2 extends javax.swing.JFrame {
                 .addGap(138, 138, 138))
         );
 
-        title4.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
-        title4.setText("Reason:");
+        getContentPane().add(infoForUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 86, -1, 162));
+
+        title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
+        title3.setText("Reason:");
 
         jTextField2.setText("jTextField1");
 
@@ -203,13 +183,13 @@ public class Frame2 extends javax.swing.JFrame {
                         .addComponent(jButton1))
                     .addGroup(userReasonLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(title4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 192, Short.MAX_VALUE))
         );
         userReasonLayout.setVerticalGroup(
             userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(userReasonLayout.createSequentialGroup()
-                .addComponent(title4)
+                .addComponent(title3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -217,71 +197,10 @@ public class Frame2 extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(niceTabHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(userReason, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 254, -1, 121));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void uselessbutton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton1ActionPerformed
-
-    }//GEN-LAST:event_uselessbutton1ActionPerformed
-
-    private void uselessbutton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton2ActionPerformed
-
-    }//GEN-LAST:event_uselessbutton2ActionPerformed
-
-    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
-
-    }//GEN-LAST:event_exitActionPerformed
-
-    private void uselessbutton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uselessbutton3ActionPerformed
-
-    }//GEN-LAST:event_uselessbutton3ActionPerformed
-
-    private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ethicalActionPerformed
-
-    private void unethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unethicalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_unethicalActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -323,6 +242,7 @@ public class Frame2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel catergory;
     private javax.swing.JRadioButton ethical;
     private javax.swing.JButton exit;
@@ -336,7 +256,7 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JLabel scenario;
     private javax.swing.JLabel title1;
     private javax.swing.JLabel title2;
-    private javax.swing.JLabel title4;
+    private javax.swing.JLabel title3;
     private javax.swing.JRadioButton unethical;
     private javax.swing.JRadioButton uselessbutton1;
     private javax.swing.JRadioButton uselessbutton2;
