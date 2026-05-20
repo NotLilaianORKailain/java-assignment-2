@@ -29,6 +29,14 @@ public class Frame1 extends javax.swing.JFrame {
             array[3] = new IntellectualPropertyCase("AI Trained on Artist Work", 
                      "An AI image generator was trained on millions of artworks "
                     + "scraped without permission. Artists receive no credit or payment.", "AI-generated art", "Intellectual Property Case");
+            array[4] = new PrivacyCase("The Too Personal Advertisement","A platform collects user preferences in order to market the most"
+                    + "inline advertisement. Data is backlogged and sent to third-party sites.","commoditize data","Privacy Case");
+            array[5] = new AlgorithmCase("The Moral Highway","Self-driving cars, in a case of unavoidable harm, are programmed to prioritize the "
+                    + "driver's life regardless of pedestrian number, age, or health.", "autonomous systems", "Algorithm Case");
+            array[6] = new MisinformationCase("Overly Restrictive Policy","As a fact-checking initiative, organizations have placed very" 
+                    + " limited allowed topics of discussion that are heavily regulated.", "freedom of speech", "Misinformation Case");
+            array[7] = new IntellectualPropertyCase ("AI as a Profession", "An individual who can't afford a lawyer uses AI to represent them "
+                    + "within an online court trial.", " AI validity", "Intellectual Property Case"); 
     }
 
     /**
