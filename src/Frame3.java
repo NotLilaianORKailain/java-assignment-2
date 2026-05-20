@@ -14,6 +14,10 @@ public class Frame3 extends javax.swing.JFrame {
      */
     public Frame3() {
         initComponents();
+        scenario.setText("1 " + Frame1.array[0].getCaseTitle());
+        catergory.setText("1 " + Frame1.array[0].getCaseCategory());
+        question2.setText("" + Frame1.array[0].getCaseDescription());
+        Frame1.array[0].verdict.setReason(answer2.getText());
     }
 
    
@@ -159,7 +163,11 @@ public class Frame3 extends javax.swing.JFrame {
         title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title3.setText("Reason:");
 
-        answer2.setText("jTextField1");
+        answer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                answer2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -247,15 +255,7 @@ public class Frame3 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        boolean buttonclick = false;
-        for (int i = 0; i < Frame1.array.length; i++) {
-            scenario.setText("" + i + Frame1.array[0].getCaseTitle());
-            question2.setText("" + Frame1.array[0].getCaseDescription());
-            Frame1.array[0].verdict.setReason(answer2.getText());
-            if (buttonclick == true) {
-
-            }
-        }
+       
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
         } else {
@@ -263,6 +263,10 @@ public class Frame3 extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answer2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_answer2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,11 +296,11 @@ public class Frame3 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Frame3().setVisible(true);
-            }
-        });
+       // java.awt.EventQueue.invokeLater(new Runnable() {
+            //public void run() {
+               // new Frame3().setVisible(true);
+            //}
+        //});
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

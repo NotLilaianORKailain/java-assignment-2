@@ -172,8 +172,6 @@ public class Frame2 extends javax.swing.JFrame {
         title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title3.setText("Reason:");
 
-        jTextField2.setText("jTextField1");
-
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
