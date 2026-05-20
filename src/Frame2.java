@@ -14,7 +14,10 @@ public class Frame2 extends javax.swing.JFrame {
      */
     public Frame2() {
         initComponents();
-        
+        scenario.setText("1 " + Frame1.array[0].getCaseTitle());
+        catergory.setText("1 " + Frame1.array[0].getCaseCategory());
+        jTextArea1.setText("" + Frame1.array[0].getCaseDescription());
+        Frame1.array[0].verdict.setReason(jTextField2.getText());
             
     }
 
@@ -97,13 +100,13 @@ public class Frame2 extends javax.swing.JFrame {
 
         getContentPane().add(niceTabHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 494, -1));
 
-        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         title1.setText("Scenario #");
         getContentPane().add(title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 47, 126, 33));
 
-        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         scenario.setText("<num> caseTitle");
-        getContentPane().add(scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 47, 305, 33));
+        getContentPane().add(scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 330, 30));
 
         title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title2.setText("categorY:");
@@ -133,11 +136,11 @@ public class Frame2 extends javax.swing.JFrame {
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(infoForUserLayout.createSequentialGroup()
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(infoForUserLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(infoForUserLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(ethical)
@@ -214,21 +217,17 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        boolean buttonclick = false;
-        for (int i = 0; i < Frame1.array.length; i++) {
-            scenario.setText("" + i + Frame1.array[0].getCaseTitle());
-            jTextArea1.setText("" + Frame1.array[0].getCaseDescription());
-            Frame1.array[0].verdict.setReason(jTextField2.getText());
-            if (buttonclick == true) {
-                
-            }
-        }
+            
+
+
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
         } else {
             Frame1.unethicalcount++;
         }
         
+        new Frame3().setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
