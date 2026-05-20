@@ -7,21 +7,19 @@
  *
  * @author 342799913
  */
-public class Frame3 extends javax.swing.JFrame {
+public class Frame4 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Frame3
+     * Creates new form Frame4
      */
-    public Frame3() {
+    public Frame4() {
         initComponents();
-        scenario.setText("2 " + Frame1.array[1].getCaseTitle());
-        catergory.setText("2 " + Frame1.array[1].getCaseCategory());
-        question2.setText("" + Frame1.array[1].getCaseDescription());
-        Frame1.array[1].verdict.setReason(answer2.getText());
+        scenario.setText("3 " + Frame1.array[2].getCaseTitle());
+        catergory.setText("3 " + Frame1.array[2].getCaseCategory());
+        jTextArea1.setText("" + Frame1.array[2].getCaseDescription());
+        Frame1.array[2].verdict.setReason(jTextField2.getText());
     }
 
-   
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,10 +44,10 @@ public class Frame3 extends javax.swing.JFrame {
         ethical = new javax.swing.JRadioButton();
         unethical = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        question2 = new javax.swing.JTextArea();
+        jTextArea1 = new javax.swing.JTextArea();
         userReason = new javax.swing.JPanel();
         title3 = new javax.swing.JLabel();
-        answer2 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,10 +95,10 @@ public class Frame3 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         title1.setText("Scenario #");
 
-        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
+        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         scenario.setText("<num> caseTitle");
 
         title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
@@ -118,10 +116,10 @@ public class Frame3 extends javax.swing.JFrame {
 
         unethical.setText("Unethical");
 
-        question2.setEditable(false);
-        question2.setColumns(20);
-        question2.setRows(5);
-        jScrollPane1.setViewportView(question2);
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
         infoForUser.setLayout(infoForUserLayout);
@@ -129,11 +127,11 @@ public class Frame3 extends javax.swing.JFrame {
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(infoForUserLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(infoForUserLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(ethical)
@@ -142,7 +140,7 @@ public class Frame3 extends javax.swing.JFrame {
                     .addGroup(infoForUserLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         infoForUserLayout.setVerticalGroup(
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,12 +160,6 @@ public class Frame3 extends javax.swing.JFrame {
 
         title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title3.setText("Reason:");
-
-        answer2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                answer2ActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +183,7 @@ public class Frame3 extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(answer2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         userReasonLayout.setVerticalGroup(
@@ -199,7 +191,7 @@ public class Frame3 extends javax.swing.JFrame {
             .addGroup(userReasonLayout.createSequentialGroup()
                 .addComponent(title3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(answer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addGap(36, 36, 36))
@@ -209,24 +201,26 @@ public class Frame3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 532, Short.MAX_VALUE)
+            .addGap(0, 524, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 19, Short.MAX_VALUE)
+                    .addGap(0, 13, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(57, 57, 57)
-                            .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(6, 6, 6)
-                            .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(107, 107, 107)
+                                    .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(12, 12, 12)
-                            .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 19, Short.MAX_VALUE)))
+                            .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 14, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,8 +231,10 @@ public class Frame3 extends javax.swing.JFrame {
                     .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(6, 6, 6)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(6, 6, 6)
                     .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(6, 6, 6)
@@ -255,19 +251,16 @@ public class Frame3 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       
-        if (ethical.isSelected()) {
+
+       if (ethical.isSelected()) {
             Frame1.ethicalcount++;
         } else {
             Frame1.unethicalcount++;
         }
-new Frame4().setVisible(true);
-        this.setVisible(false);
+        
+        //new Frame5().setVisible(true);
+        //this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answer2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_answer2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,26 +279,25 @@ new Frame4().setVisible(true);
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame3().setVisible(true);
+                new Frame4().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField answer2;
     private javax.swing.JLabel catergory;
     private javax.swing.JRadioButton ethical;
     private javax.swing.JButton exit;
@@ -313,9 +305,10 @@ new Frame4().setVisible(true);
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JPanel niceTabHeader;
-    private javax.swing.JTextArea question2;
     private javax.swing.JLabel scenario;
     private javax.swing.JLabel title1;
     private javax.swing.JLabel title2;

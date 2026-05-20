@@ -22,10 +22,10 @@ public class Frame1 extends javax.swing.JFrame {
                      + " even when \nthe device was not activated. Employees reviewed the recordings.", "audio recordings", "Privacy Case");
             array[1] = new AlgorithmCase("The Biased Hiring Bot", 
                      "A tech company's AI screening tool ranked male applicants "
-                    + "higher than equally qualified female applicants.", "gender bias", "Algorithm Case");
+                    + "higher than \nequally qualified female applicants.", "gender bias", "Algorithm Case");
             array[2] = new MisinformationCase("The Deepfake Politician", 
                      "A deepfake video of a candidate saying things they never "
-                    + "said spread widely online during an election before being identified as fake.", "deepfake video", "Misinformation Case");
+                    + "said \nspread widely online during an election before being identified as fake.", "deepfake video", "Misinformation Case");
             array[3] = new IntellectualPropertyCase("AI Trained on Artist Work", 
                      "An AI image generator was trained on millions of artworks "
                     + "scraped without permission. Artists receive no credit or payment.", "AI-generated art", "Intellectual Property Case");
