@@ -14,8 +14,8 @@ public class Frame2 extends javax.swing.JFrame {
      */
     public Frame2() {
         initComponents();
-        jTextArea1.setText("" + Frame1.array[0].getCaseDescription());
-        Frame1.array[0].verdict.setReason(jTextField2.getText());
+        
+            
     }
 
     /**
@@ -214,6 +214,15 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        boolean buttonclick = false;
+        for (int i = 0; i < Frame1.array.length; i++) {
+            scenario.setText("" + i + Frame1.array[0].getCaseTitle());
+            jTextArea1.setText("" + Frame1.array[0].getCaseDescription());
+            Frame1.array[0].verdict.setReason(jTextField2.getText());
+            if (buttonclick == true) {
+                
+            }
+        }
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
         } else {
