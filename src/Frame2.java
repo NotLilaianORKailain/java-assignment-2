@@ -9,14 +9,16 @@
  */
 public class Frame2 extends javax.swing.JFrame {
 
+    public int counter = 1;
+    
     /**
      * Creates new form Frame2
      */
     public Frame2() {
         initComponents();
         scenario.setText("1 " + Frame1.array[0].getCaseTitle());
-        catergory.setText("1 " + Frame1.array[0].getCaseCategory());
-        jTextArea1.setText("" + Frame1.array[0].getCaseDescription());
+        catergory.setText(Frame1.array[0].getCaseCategory());
+        description.setText("" + Frame1.array[0].getCaseDescription());
         Frame1.array[0].verdict.setReason(jTextField2.getText());
             
     }
@@ -46,7 +48,7 @@ public class Frame2 extends javax.swing.JFrame {
         ethical = new javax.swing.JRadioButton();
         unethical = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        description = new javax.swing.JTextArea();
         userReason = new javax.swing.JPanel();
         title3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -125,10 +127,10 @@ public class Frame2 extends javax.swing.JFrame {
         buttonGroup1.add(unethical);
         unethical.setText("Unethical");
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        description.setEditable(false);
+        description.setColumns(20);
+        description.setRows(5);
+        jScrollPane1.setViewportView(description);
 
         javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
         infoForUser.setLayout(infoForUserLayout);
@@ -136,9 +138,9 @@ public class Frame2 extends javax.swing.JFrame {
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(infoForUserLayout.createSequentialGroup()
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
+                    .addGroup(infoForUserLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(infoForUserLayout.createSequentialGroup()
@@ -214,18 +216,25 @@ public class Frame2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-            
 
+        scenario.setText(counter+1 +" "+Frame1.array[counter].getCaseTitle());
+        catergory.setText(Frame1.array[counter].getCaseCategory());
+        description.setText("" + Frame1.array[counter].getCaseDescription());
+        Frame1.array[counter].verdict.setReason(jTextField2.getText());
+            
 
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
         } else {
             Frame1.unethicalcount++;
         }
+            
+        counter++;
         
-        new Frame3().setVisible(true);
-        this.setVisible(false);
+        if (counter == 7){
+//        new Frame3().setVisible(true);
+//        this.setVisible(false);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -271,13 +280,13 @@ public class Frame2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel catergory;
+    private javax.swing.JTextArea description;
     private javax.swing.JRadioButton ethical;
     private javax.swing.JButton exit;
     private javax.swing.JPanel infoForUser;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JPanel niceTabHeader;
