@@ -11,7 +11,7 @@ public class Frame1 extends javax.swing.JFrame {
     public static EthicsCase array[] = new EthicsCase [8];
     public static int ethicalcount = 0;
     public static int unethicalcount = 0;
-    public static int counter = 1;
+    public static int counter = 0;
     
     /**
      * Creates new form Frame1

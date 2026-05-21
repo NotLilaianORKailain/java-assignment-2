@@ -13,10 +13,10 @@ public class Frame2 extends javax.swing.JFrame {
      */
     public Frame2() {
         initComponents();
-        scenario.setText(Frame1.counter +" "+Frame1.array[Frame1.counter-1].getCaseTitle());
-        catergory.setText(Frame1.array[Frame1.counter-1].getCaseCategory());
-        description.setText("" + Frame1.array[Frame1.counter-1].getCaseDescription());
-        Frame1.array[Frame1.counter-1].verdict.setReason(jTextField2.getText());
+        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
+        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
+        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
+        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
             
     }
 
@@ -215,34 +215,34 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
-        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
-        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
-        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
-            
-
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
             buttonGroup1.clearSelection();
-            Frame1.counter++;
+            
+            if (Frame1.counter == 7){
+                new Frame3().setVisible(true);
+                this.setVisible(false);
+            } else 
+                Frame1.counter++;
             
         } else if (unethical.isSelected()){
             Frame1.unethicalcount++;
             buttonGroup1.clearSelection();
-            Frame1.counter++;
             
+            if (Frame1.counter == 7){
+                new Frame3().setVisible(true);
+                this.setVisible(false);
+            } else 
+                Frame1.counter++;
         } else {
             new Frame2().setVisible(true);
             this.setVisible(false);
         }
-            
-
-        
-        if (Frame1.counter == 8){
-            new Frame3().setVisible(true);
-            this.setVisible(false);
-        }
-        
+ 
+        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
+        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
+        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
+        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
