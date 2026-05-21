@@ -8,18 +8,15 @@
  * @author 343479150
  */
 public class Frame2 extends javax.swing.JFrame {
-
-    public int counter = 1;
-    
     /**
      * Creates new form Frame2
      */
     public Frame2() {
         initComponents();
-        scenario.setText("1 " + Frame1.array[0].getCaseTitle());
-        catergory.setText(Frame1.array[0].getCaseCategory());
-        description.setText("" + Frame1.array[0].getCaseDescription());
-        Frame1.array[0].verdict.setReason(jTextField2.getText());
+        scenario.setText(Frame1.counter +" "+Frame1.array[Frame1.counter-1].getCaseTitle());
+        catergory.setText(Frame1.array[Frame1.counter-1].getCaseCategory());
+        description.setText("" + Frame1.array[Frame1.counter-1].getCaseDescription());
+        Frame1.array[Frame1.counter-1].verdict.setReason(jTextField2.getText());
             
     }
 
@@ -75,7 +72,8 @@ public class Frame2 extends javax.swing.JFrame {
         niceTabHeader.setLayout(niceTabHeaderLayout);
         niceTabHeaderLayout.setHorizontalGroup(
             niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createSequentialGroup()
+            .addGroup(niceTabHeaderLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(uselessbutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -84,12 +82,12 @@ public class Frame2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(uselessbutton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE))
+                .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                .addContainerGap())
         );
         niceTabHeaderLayout.setVerticalGroup(
             niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(niceTabHeaderLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -97,7 +95,7 @@ public class Frame2 extends javax.swing.JFrame {
                         .addComponent(uselessbutton1)
                         .addComponent(uselessbutton2)
                         .addComponent(uselessbutton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
 
         getContentPane().add(niceTabHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 494, -1));
@@ -210,30 +208,39 @@ public class Frame2 extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        getContentPane().add(userReason, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, 121));
+        getContentPane().add(userReason, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, 140));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        scenario.setText(counter+1 +" "+Frame1.array[counter].getCaseTitle());
-        catergory.setText(Frame1.array[counter].getCaseCategory());
-        description.setText("" + Frame1.array[counter].getCaseDescription());
-        Frame1.array[counter].verdict.setReason(jTextField2.getText());
+        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
+        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
+        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
+        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
             
 
         if (ethical.isSelected()) {
             Frame1.ethicalcount++;
-        } else {
+            buttonGroup1.clearSelection();
+            Frame1.counter++;
+            
+        } else if (unethical.isSelected()){
             Frame1.unethicalcount++;
+            buttonGroup1.clearSelection();
+            Frame1.counter++;
+            
+        } else {
+            new Frame2().setVisible(true);
+            this.setVisible(false);
         }
             
-        counter++;
+
         
-        if (counter == 7){
-//        new Frame3().setVisible(true);
-//        this.setVisible(false);
+        if (Frame1.counter == 7){
+            new Frame3().setVisible(true);
+            this.setVisible(false);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
