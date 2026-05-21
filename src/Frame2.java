@@ -238,7 +238,7 @@ public class Frame2 extends javax.swing.JFrame {
             
 
         
-        if (Frame1.counter == 7){
+        if (Frame1.counter == 8){
             new Frame3().setVisible(true);
             this.setVisible(false);
         }
