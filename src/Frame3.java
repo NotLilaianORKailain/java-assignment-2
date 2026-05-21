@@ -5,23 +5,34 @@
 
 /**
  *
- * @author 342799913
+ * @author 343244042
  */
 public class Frame3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Frame3
+     * Creates new form EndFrame
      */
     public Frame3() {
         initComponents();
-        scenario.setText("2 " + Frame1.array[1].getCaseTitle());
-        catergory.setText("2 " + Frame1.array[1].getCaseCategory());
-        question2.setText("" + Frame1.array[1].getCaseDescription());
-        Frame1.array[1].verdict.setReason(answer2.getText());
+        
+        jLabel2.setText("" + Frame1.ethicalcount);
+        jLabel3.setText("" + Frame1.unethicalcount);
+        
+        if (Frame1.unethicalcount <= 2){
+            jTextArea1.setText("Your profile: The The Optimist/nYou see technology as largely"
+            + "a force for good. You tend to trust that companies and developers have good intentions.");
+        }else if (Frame1.unethicalcount <= 4){
+            jTextArea1.setText("Your profile: The Cautious Realist/nYou see both the benefits and dangers"
+            + "of technology. You believe progress is good, but needs rules and accountability.");
+        }else if (Frame1.unethicalcount <= 6){
+            jTextArea1.setText("Your profile: The Critical Thinker/n You are skeptical of how technology is being used."
+            + " You believe the tech industry needs serious reform to protect people.");
+        }else{
+            jTextArea1.setText("Your profile: The Ethics Watchdog/nYou believe technology is causing more harm"
+            + " than good right now. You think strong laws and ethical standards are urgently needed.");
+        }
     }
 
-   
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,243 +42,82 @@ public class Frame3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        niceTabHeader = new javax.swing.JPanel();
-        uselessbutton1 = new javax.swing.JRadioButton();
-        uselessbutton2 = new javax.swing.JRadioButton();
-        exit = new javax.swing.JButton();
-        uselessbutton3 = new javax.swing.JRadioButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        title1 = new javax.swing.JLabel();
-        scenario = new javax.swing.JLabel();
-        infoForUser = new javax.swing.JPanel();
-        title2 = new javax.swing.JLabel();
-        catergory = new javax.swing.JLabel();
-        ethical = new javax.swing.JRadioButton();
-        unethical = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        question2 = new javax.swing.JTextArea();
-        userReason = new javax.swing.JPanel();
-        title3 = new javax.swing.JLabel();
-        answer2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        uselessbutton1.setText(" ");
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        uselessbutton2.setText(" ");
+        jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        jLabel1.setText("Results");
 
-        exit.setBackground(new java.awt.Color(255, 153, 153));
-        exit.setText("X"); // NOI18N
-        exit.setToolTipText("");
+        jLabel2.setFont(new java.awt.Font("Kristen ITC", 1, 36)); // NOI18N
+        jLabel2.setText("1");
 
-        uselessbutton3.setText(" ");
+        jLabel3.setFont(new java.awt.Font("Kristen ITC", 1, 36)); // NOI18N
+        jLabel3.setText("2");
 
-        jTextPane2.setEditable(false);
-        jTextPane2.setText("https://wwvv.notavirus.com/embed/ASYIfd?feature=fileloop");
-        jScrollPane2.setViewportView(jTextPane2);
+        jLabel4.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        jLabel4.setText("Ethical");
 
-        javax.swing.GroupLayout niceTabHeaderLayout = new javax.swing.GroupLayout(niceTabHeader);
-        niceTabHeader.setLayout(niceTabHeaderLayout);
-        niceTabHeaderLayout.setHorizontalGroup(
-            niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(uselessbutton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(uselessbutton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(uselessbutton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE))
-        );
-        niceTabHeaderLayout.setVerticalGroup(
-            niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(niceTabHeaderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, niceTabHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(exit)
-                        .addComponent(uselessbutton1)
-                        .addComponent(uselessbutton2)
-                        .addComponent(uselessbutton3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        title1.setText("Scenario #");
-
-        scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 18)); // NOI18N
-        scenario.setText("<num> caseTitle");
-
-        title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
-        title2.setText("categorY:");
-
-        catergory.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
-        catergory.setText("categorY");
-
-        ethical.setText("Ethical");
-        ethical.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ethicalActionPerformed(evt);
-            }
-        });
-
-        unethical.setText("Unethical");
-
-        question2.setEditable(false);
-        question2.setColumns(20);
-        question2.setRows(5);
-        jScrollPane1.setViewportView(question2);
-
-        javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
-        infoForUser.setLayout(infoForUserLayout);
-        infoForUserLayout.setHorizontalGroup(
-            infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
-                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(ethical)
-                        .addGap(47, 47, 47)
-                        .addComponent(unethical))
-                    .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        infoForUserLayout.setVerticalGroup(
-            infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(infoForUserLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(title2)
-                    .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ethical)
-                    .addComponent(unethical))
-                .addGap(138, 138, 138))
-        );
-
-        title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
-        title3.setText("Reason:");
-
-        answer2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                answer2ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("SUBMIT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout userReasonLayout = new javax.swing.GroupLayout(userReason);
-        userReason.setLayout(userReasonLayout);
-        userReasonLayout.setHorizontalGroup(
-            userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userReasonLayout.createSequentialGroup()
-                .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(userReasonLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton1))
-                    .addGroup(userReasonLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(answer2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        userReasonLayout.setVerticalGroup(
-            userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userReasonLayout.createSequentialGroup()
-                .addComponent(title3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(answer2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addGap(36, 36, 36))
-        );
+        jLabel5.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        jLabel5.setText("Unethical");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 532, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 19, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(57, 57, 57)
-                            .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(6, 6, 6)
-                            .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(18, 18, 18)
-                            .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 19, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(206, 206, 206))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(124, 124, 124))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(104, 104, 104))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(niceTabHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(6, 6, 6)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(scenario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(6, 6, 6)
-                    .addComponent(infoForUser, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(6, 6, 6)
-                    .addComponent(userReason, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ethicalActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-       
-        if (ethical.isSelected()) {
-            Frame1.ethicalcount++;
-        } else {
-            Frame1.unethicalcount++;
-        }
-new Frame4().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void answer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answer2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_answer2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,9 +145,10 @@ new Frame4().setVisible(true);
             java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Frame3().setVisible(true);
             }
@@ -305,25 +156,12 @@ new Frame4().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField answer2;
-    private javax.swing.JLabel catergory;
-    private javax.swing.JRadioButton ethical;
-    private javax.swing.JButton exit;
-    private javax.swing.JPanel infoForUser;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JPanel niceTabHeader;
-    private javax.swing.JTextArea question2;
-    private javax.swing.JLabel scenario;
-    private javax.swing.JLabel title1;
-    private javax.swing.JLabel title2;
-    private javax.swing.JLabel title3;
-    private javax.swing.JRadioButton unethical;
-    private javax.swing.JRadioButton uselessbutton1;
-    private javax.swing.JRadioButton uselessbutton2;
-    private javax.swing.JRadioButton uselessbutton3;
-    private javax.swing.JPanel userReason;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
