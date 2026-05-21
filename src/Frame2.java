@@ -104,17 +104,21 @@ public class Frame2 extends javax.swing.JFrame {
 
         title1.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         title1.setText("Scenario #");
-        getContentPane().add(title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 47, 126, 33));
+        title1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 126, 20));
 
         scenario.setFont(new java.awt.Font("Perpetua Titling MT", 1, 16)); // NOI18N
         scenario.setText("<num> caseTitle");
-        getContentPane().add(scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 330, 30));
+        scenario.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 330, 20));
 
         title2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title2.setText("categorY:");
+        title2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         catergory.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         catergory.setText("categorY");
+        catergory.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         buttonGroup1.add(ethical);
         ethical.setText("Ethical");
@@ -151,7 +155,7 @@ public class Frame2 extends javax.swing.JFrame {
                     .addGroup(infoForUserLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         infoForUserLayout.setVerticalGroup(
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,15 +165,15 @@ public class Frame2 extends javax.swing.JFrame {
                     .addComponent(title2)
                     .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ethical)
                     .addComponent(unethical))
                 .addGap(138, 138, 138))
         );
 
-        getContentPane().add(infoForUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 86, -1, 162));
+        getContentPane().add(infoForUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 500, 160));
 
         title3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 14)); // NOI18N
         title3.setText("Reason:");
@@ -186,18 +190,14 @@ public class Frame2 extends javax.swing.JFrame {
         userReasonLayout.setHorizontalGroup(
             userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(userReasonLayout.createSequentialGroup()
-                .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(userReasonLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton1))
-                    .addGroup(userReasonLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 344, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField2)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)))
         );
         userReasonLayout.setVerticalGroup(
             userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,12 +205,12 @@ public class Frame2 extends javax.swing.JFrame {
                 .addComponent(title3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addGap(36, 36, 36))
+                .addGap(42, 42, 42))
         );
 
-        getContentPane().add(userReason, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 254, -1, 121));
+        getContentPane().add(userReason, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, 121));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
