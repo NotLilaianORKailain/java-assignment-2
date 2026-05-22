@@ -2,6 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+import java.io.File;
+import java.util.Scanner;
+import java.io.IOException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 
 /**
  *
@@ -238,7 +243,17 @@ public class Frame2 extends javax.swing.JFrame {
             new Frame2().setVisible(true);
             this.setVisible(false);
         }
- 
+         //Writing to a file
+        try{
+            FileWriter writer = new FileWriter("message.txt",true);
+            PrintWriter output = new PrintWriter(writer);
+            output.println(jTextField2.getText()); // get text
+            output.close();                         // close file
+            System.out.println("successfully printed to file"); //success message
+        }catch (IOException e){
+              System.err.println("Java Exception"); 
+        } // close try-catch command
+
         scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
         catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
         description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
