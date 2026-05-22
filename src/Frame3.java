@@ -19,17 +19,17 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel3.setText("" + Frame1.unethicalcount);
         
         if (Frame1.unethicalcount <= 2){
-            jTextArea1.setText("Your profile: The The Optimist/nYou see technology as largely"
-            + "a force for good. You tend to trust that companies and developers have good intentions.");
+            jTextArea1.setText("Your profile: The The Optimist\nYou see technology as largely "
+            + "a force for good.\nYou tend to trust that companies and developers\nhave good intentions.");
         }else if (Frame1.unethicalcount <= 4){
-            jTextArea1.setText("Your profile: The Cautious Realist/nYou see both the benefits and dangers"
-            + "of technology. You believe progress is good, but needs rules and accountability.");
+            jTextArea1.setText("Your profile: The Cautious Realist\nYou see both the benefits and dangers"
+            + " of \ntechnology. You believe progress is good, but \nneeds rules and accountability.");
         }else if (Frame1.unethicalcount <= 6){
-            jTextArea1.setText("Your profile: The Critical Thinker/n You are skeptical of how technology is being used."
-            + " You believe the tech industry needs serious reform to protect people.");
+            jTextArea1.setText("Your profile: The Critical Thinker\n You are skeptical of how technology is being \nused."
+            + "You believe the tech industry needs serious \nreform to protect people.");
         }else{
-            jTextArea1.setText("Your profile: The Ethics Watchdog/nYou believe technology is causing more harm"
-            + " than good right now. You think strong laws and ethical standards are urgently needed.");
+            jTextArea1.setText("Your profile: The Ethics Watchdog\nYou believe technology is causing more harm"
+            + " \nthan good right now.You think strong laws and \nethical standards are urgently needed.");
         }
     }
 
