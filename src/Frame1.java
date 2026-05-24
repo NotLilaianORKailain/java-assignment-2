@@ -8,16 +8,17 @@
  * @author 343479150
  */
 public class Frame1 extends javax.swing.JFrame {
-    public static EthicsCase array[] = new EthicsCase [8];
-    public static int ethicalcount = 0;
-    public static int unethicalcount = 0;
-    public static int counter = 0;
+    public static EthicsCase array[] = new EthicsCase [8]; //intialize array
+    public static int ethicalcount = 0; //ethical counter
+    public static int unethicalcount = 0; //unethical counter
+    public static int counter = 0; //page counter
     
     /**
      * Creates new form Frame1
      */
     public Frame1() {
         initComponents();
+            //All the prompts Title/Description/Topic/Case Type
             array[0] = new PrivacyCase("The Always-On Microphone", 
              "A smart speaker company recorded household conversations"
                      + " even when \nthe device was not activated. Employees reviewed the recordings.", "audio recordings", "Privacy Case");
@@ -132,7 +133,7 @@ public class Frame1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new Frame2().setVisible(true);
+        new Frame2().setVisible(true); //to the next frame
         this.setVisible(false);
         
     }//GEN-LAST:event_jButton1ActionPerformed

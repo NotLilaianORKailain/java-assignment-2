@@ -1,9 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-import java.io.File;
-import java.util.Scanner;
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template */
+
+//imports
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -220,21 +219,22 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+        //Ethical is selected
         if (ethical.isSelected()) {
-            Frame1.ethicalcount++;
+            Frame1.ethicalcount++; //increase counter for ethical
             buttonGroup1.clearSelection();
             
-            if (Frame1.counter == 7){
+            if (Frame1.counter == 7){ //send to verdict page
                 new Frame3().setVisible(true);
                 this.setVisible(false);
             } else 
                 Frame1.counter++;
+        //Unethical is selected
+        } else if (unethical.isSelected()){ 
+            Frame1.unethicalcount++; //increase counter for unethical
+            buttonGroup1.clearSelection(); 
             
-        } else if (unethical.isSelected()){
-            Frame1.unethicalcount++;
-            buttonGroup1.clearSelection();
-            
-            if (Frame1.counter == 7){
+            if (Frame1.counter == 7){ //send to verdict page
                 new Frame3().setVisible(true);
                 this.setVisible(false);
             } else 
@@ -243,7 +243,8 @@ public class Frame2 extends javax.swing.JFrame {
             new Frame2().setVisible(true);
             this.setVisible(false);
         }
-         //Writing to a file
+         
+        //Writing to a file
         try{
             FileWriter writer = new FileWriter("message.txt",true);
             PrintWriter output = new PrintWriter(writer);
