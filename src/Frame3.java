@@ -15,21 +15,22 @@ public class Frame3 extends javax.swing.JFrame {
     public Frame3() {
         initComponents();
         
-        jLabel2.setText("" + Frame1.ethicalcount);
-        jLabel3.setText("" + Frame1.unethicalcount);
+        jLabel2.setText(""+(Frame1.SIZE-Verdict.getUnethicalCount()));
+        jLabel3.setText(""+Verdict.getUnethicalCount());
+
         
-        if (Frame1.unethicalcount <= 2){
+        if (Verdict.getUnethicalCount() <= 2){
             jTextArea1.setText("Your profile: The The Optimist\nYou see technology as largely "
-            + "a force for good.\nYou tend to trust that companies and developers\nhave good intentions.");
-        }else if (Frame1.unethicalcount <= 4){
+            + "a force for good. You tend to trust that companies and developers have good intentions.");
+        }else if (Verdict.getUnethicalCount() <= 4){
             jTextArea1.setText("Your profile: The Cautious Realist\nYou see both the benefits and dangers"
-            + " of \ntechnology. You believe progress is good, but \nneeds rules and accountability.");
-        }else if (Frame1.unethicalcount <= 6){
-            jTextArea1.setText("Your profile: The Critical Thinker\n You are skeptical of how technology is being \nused."
-            + "You believe the tech industry needs serious \nreform to protect people.");
+            + " of technology. You believe progress is good, but needs rules and accountability.");
+        }else if (Verdict.getUnethicalCount() <= 6){
+            jTextArea1.setText("Your profile: The Critical Thinker\nYou are skeptical of how technology is being used."
+            + " You believe the tech industry needs serious reform to protect people.");
         }else{
             jTextArea1.setText("Your profile: The Ethics Watchdog\nYou believe technology is causing more harm"
-            + " \nthan good right now.You think strong laws and \nethical standards are urgently needed.");
+            + " than good right now. You think strong laws and ethical standards are urgently needed.");
         }
     }
 
@@ -51,70 +52,39 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(520, 390));
+        setMinimumSize(new java.awt.Dimension(520, 390));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
+        jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 312, 139));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
         jLabel1.setText("Results");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 1, 36)); // NOI18N
         jLabel2.setText("1");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 1, 36)); // NOI18N
-        jLabel3.setText("2");
+        jLabel3.setText("3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
         jLabel4.setText("Ethical");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
         jLabel5.setText("Unethical");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(206, 206, 206))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(124, 124, 124))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(104, 104, 104))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
-        );
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

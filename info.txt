@@ -1,8 +1,8 @@
-"The Always-On Microphone", "A smart speaker company recorded household conversations even when \nthe device was not activated. Employees reviewed the recordings.", "audio recordings", "Privacy Case"
-"The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than \nequally qualified female applicants.", "gender bias", "Algorithm Case"
-"The Deepfake Politician", "A deepfake video of a candidate saying things they never said \nspread widely online during an election before being identified as fake.", "deepfake video", "Misinformation Case"
-"AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without \npermission. Artists receive no credit or payment.", "AI-generated art", "Intellectual Property Case"
-"The Too Personal Advertisement", "A platform collects user preferences in order to market the most inline \nadvertisement. Data is backlogged and sent to third-party sites.","commoditize data","Privacy Case"
-"The Moral Highway", "Self-driving cars, in a case of unavoidable harm, are programmed to \nprioritize the driver's life regardless of pedestrian number, age, or health.", "autonomous systems", "Algorithm Case"
-"Overly Restrictive Policy","As a fact-checking initiative, organizations have placed very limited allowed\ntopics of discussion that are heavily regulated.", "freedom of speech", "Misinformation Case
-"AI as a Profession", "An individual who can't afford a lawyer uses AI to represent them within an\nonline court trial.", " AI validity", "Intellectual Property Case"
+The Always-On Microphone|A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.|audio recordings|Privacy Case
+The Biased Hiring Bot|A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.|gender bias|Algorithm Case
+The Deepfake Politician|A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.|deepfake video|Misinformation Case
+AI Trained on Artist Work|An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.|AI-generated art|Intellectual Property Case
+Too Personal Advertisement|A platform collects user preferences in order to market the most inline advertisement. Data is backlogged and sent to third-party sites.|commoditize data|Privacy Case
+The Moral Highway|Self-driving cars, in a case of unavoidable harm, are programmed to prioritize the driver's life regardless of pedestrian number, age, or health.|autonomous systems|Algorithm Case
+Overly Restrictive Policy|As a fact-checking initiative, organizations have placed very limited allowed topics of discussion that are heavily regulated.|freedom of speech|Misinformation Case
+AI as a Profession|An individual who can't afford a lawyer uses AI to represent them within an online court trial.|AI validity|Intellectual Property Case

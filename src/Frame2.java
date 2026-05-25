@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-import java.io.File;
-import java.util.Scanner;
+
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -13,16 +12,27 @@ import java.io.PrintWriter;
  * @author 343479150
  */
 public class Frame2 extends javax.swing.JFrame {
+    
+    private void loadCase(EthicsCase e) {
+
+        //set the title of the case
+        scenario.setText((Frame1.counter + 1) + " " + e.getCaseTitle());
+        
+        //set the subtitle of the case
+        catergory.setText(e.getCaseCategory());
+        
+        //set the block of text of teh case
+        description.setText(e.getCaseDescription());
+
+        reason.setText(""); // clear previous input
+    }
+
     /**
      * Creates new form Frame2
      */
     public Frame2() {
         initComponents();
-        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
-        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
-        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
-        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
-            
+        loadCase(Frame1.array[Frame1.counter]);
     }
 
     /**
@@ -53,10 +63,11 @@ public class Frame2 extends javax.swing.JFrame {
         description = new javax.swing.JTextArea();
         userReason = new javax.swing.JPanel();
         title3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        reason = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(520, 390));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         uselessbutton1.setText(" ");
@@ -136,7 +147,9 @@ public class Frame2 extends javax.swing.JFrame {
 
         description.setEditable(false);
         description.setColumns(20);
+        description.setLineWrap(true);
         description.setRows(5);
+        description.setWrapStyleWord(true);
         jScrollPane1.setViewportView(description);
 
         javax.swing.GroupLayout infoForUserLayout = new javax.swing.GroupLayout(infoForUser);
@@ -145,20 +158,21 @@ public class Frame2 extends javax.swing.JFrame {
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(infoForUserLayout.createSequentialGroup()
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(infoForUserLayout.createSequentialGroup()
+                            .addGap(144, 144, 144)
+                            .addComponent(ethical)
+                            .addGap(47, 47, 47)
+                            .addComponent(unethical))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoForUserLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(ethical)
-                        .addGap(47, 47, 47)
-                        .addComponent(unethical))
-                    .addGroup(infoForUserLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addGap(19, 19, 19)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         infoForUserLayout.setVerticalGroup(
             infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +182,7 @@ public class Frame2 extends javax.swing.JFrame {
                     .addComponent(title2)
                     .addComponent(catergory, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoForUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ethical)
@@ -199,7 +213,7 @@ public class Frame2 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userReasonLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(userReasonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2)
+                    .addComponent(reason)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)))
         );
         userReasonLayout.setVerticalGroup(
@@ -207,7 +221,7 @@ public class Frame2 extends javax.swing.JFrame {
             .addGroup(userReasonLayout.createSequentialGroup()
                 .addComponent(title3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(reason, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addGap(42, 42, 42))
@@ -219,45 +233,49 @@ public class Frame2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //store case name
+        Frame1.array[Frame1.counter].verdict.setCaseName(scenario.getText());
 
+        //store decision
         if (ethical.isSelected()) {
-            Frame1.ethicalcount++;
-            buttonGroup1.clearSelection();
-            
-            if (Frame1.counter == 7){
-                new Frame3().setVisible(true);
-                this.setVisible(false);
-            } else 
-                Frame1.counter++;
-            
-        } else if (unethical.isSelected()){
-            Frame1.unethicalcount++;
-            buttonGroup1.clearSelection();
-            
-            if (Frame1.counter == 7){
-                new Frame3().setVisible(true);
-                this.setVisible(false);
-            } else 
-                Frame1.counter++;
+            Frame1.array[Frame1.counter].verdict.setStudentVerdict("ethical");
+            buttonGroup1.clearSelection();    
+        } else if (unethical.isSelected()) {
+            Frame1.array[Frame1.counter].verdict.setStudentVerdict("unethical");
+            Verdict.addUnethical(); //adds to static unethical counter
         } else {
-            new Frame2().setVisible(true);
-            this.setVisible(false);
+            return; //if nothing selected, dont do anything
         }
-         //Writing to a file
+        buttonGroup1.clearSelection(); //if a decision was made clear the buttons for next case
+        
+        //store reason
+        Frame1.array[Frame1.counter].verdict.setReason(reason.getText());
+        
+        //Writing to a file
         try{
-            FileWriter writer = new FileWriter("message.txt",true);
+            FileWriter writer = new FileWriter("message.txt", true);
             PrintWriter output = new PrintWriter(writer);
-            output.println(jTextField2.getText()); // get text
-            output.close();                         // close file
-            System.out.println("successfully printed to file"); //success message
+            output.println(
+                    Frame1.array[Frame1.counter].verdict.getCaseName()+"|"+
+                    Frame1.array[Frame1.counter].verdict.getStudentVerdict()+"|"+
+                    Frame1.array[Frame1.counter].verdict.getReason()+"|" ); // get text
+            output.close();  // close file
         }catch (IOException e){
               System.err.println("Java Exception"); 
         } // close try-catch command
 
-        scenario.setText(Frame1.counter+1 +" "+Frame1.array[Frame1.counter].getCaseTitle());
-        catergory.setText(Frame1.array[Frame1.counter].getCaseCategory());
-        description.setText("" + Frame1.array[Frame1.counter].getCaseDescription());
-        Frame1.array[Frame1.counter].verdict.setReason(jTextField2.getText());
+        //increase counter to load next case
+        Frame1.counter++;
+            
+        //check if there is a next case to run
+        if (Frame1.counter >= Frame1.array.length) {
+            new Frame3().setVisible(true);
+            this.setVisible(false);
+            return;
+        }
+        
+        //load next case
+        loadCase(Frame1.array[Frame1.counter]);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void ethicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ethicalActionPerformed
@@ -309,9 +327,9 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JPanel niceTabHeader;
+    private javax.swing.JTextField reason;
     private javax.swing.JLabel scenario;
     private javax.swing.JLabel title1;
     private javax.swing.JLabel title2;
