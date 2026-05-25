@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -11,16 +12,13 @@ public class IntellectualPropertyCase extends EthicsCase{
     // all declared var from UML
     private String ipType;
 
-    
     // child class constructor of each INTELLECTUAL PROPERTY case object
     public IntellectualPropertyCase(String caseTitle, String description, String category, String ipType){
         super(caseTitle, description, category);
         this.ipType = ipType;
     }
     
-    /** METHOD: returns the case's ipType
-     * @return String ipType 
-     */
+    // METHOD: getter method
     public String getIpType(){
         return  ipType;
     }

@@ -1,3 +1,5 @@
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -22,23 +24,13 @@ public class EthicsCase {
         this.verdict = new Verdict();
     }
     
-    /** METHOD: returns the case's title
-     * @return String caseTitle title of case
-     */
+    // METHODS: all getter methods
     public String getCaseTitle(){
         return  caseTitle;
     }
-    
-    /** METHOD: returns the case's description
-     * @return String description case's info
-     */
     public String getCaseDescription(){
         return  description;
     }
-    
-    /** METHOD: returns the case's category
-     * @return String category case's category
-     */    
     public String getCaseCategory(){
         return  category;
     }

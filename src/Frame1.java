@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,36 +12,62 @@
  * @author 343479150
  */
 public class Frame1 extends javax.swing.JFrame {
-    public static EthicsCase array[] = new EthicsCase [8];
-    public static int ethicalcount = 0;
-    public static int unethicalcount = 0;
+    // counters that can be acessed by all frames
+    public static final int SIZE = 8;
     public static int counter = 0;
+    
+    // array storing 8 ethicscase objects
+    public static EthicsCase array[] = new EthicsCase [SIZE];
     
     /**
      * Creates new form Frame1
      */
     public Frame1() {
         initComponents();
-            array[0] = new PrivacyCase("The Always-On Microphone", 
-             "A smart speaker company recorded household conversations"
-                     + " even when \nthe device was not activated. Employees reviewed the recordings.", "audio recordings", "Privacy Case");
-            array[1] = new AlgorithmCase("The Biased Hiring Bot", 
-                     "A tech company's AI screening tool ranked male applicants "
-                    + "higher than \nequally qualified female applicants.", "gender bias", "Algorithm Case");
-            array[2] = new MisinformationCase("The Deepfake Politician", 
-                     "A deepfake video of a candidate saying things they never "
-                    + "said \nspread widely online during an election before being identified as fake.", "deepfake video", "Misinformation Case");
-            array[3] = new IntellectualPropertyCase("AI Trained on Artist Work", 
-                     "An AI image generator was trained on millions of artworks "
-                    + "scraped without \npermission. Artists receive no credit or payment.", "AI-generated art", "Intellectual Property Case");
-            array[4] = new PrivacyCase("The Too Personal Advertisement","A platform collects user preferences in order to market the most"
-                    + " inline \nadvertisement. Data is backlogged and sent to third-party sites.","commoditize data","Privacy Case");
-            array[5] = new AlgorithmCase("The Moral Highway","Self-driving cars, in a case of unavoidable harm, are programmed to \nprioritize the "
-                    + "driver's life regardless of pedestrian number, age, or health.", "autonomous systems", "Algorithm Case");
-            array[6] = new MisinformationCase("Overly Restrictive Policy","As a fact-checking initiative, organizations have placed very" 
-                    + " limited allowed\ntopics of discussion that are heavily regulated.", "freedom of speech", "Misinformation Case");
-            array[7] = new IntellectualPropertyCase ("AI as a Profession", "An individual who can't afford a lawyer uses AI to represent them "
-                    + "within an\nonline court trial.", " AI validity", "Intellectual Property Case"); 
+        
+        //reading from info text file that has each case
+        try {
+            File file = new File("info.txt");
+            Scanner input = new Scanner(file);
+
+            while(input.hasNextLine()) { //read all lines in file
+                String line = input.nextLine();
+                String parts[] = line.split("\\|"); //split line at the , and store in array
+
+                //each section of array will be needed to create objects
+                String title = parts[0];
+                String desc = parts[1];
+                String category = parts[2];
+                String type = parts[3];
+    
+                //check which type the object is and create its object
+                switch(type) {
+                    case "Algorithm Case":
+                        array[counter] = new AlgorithmCase(title, desc, category, "Algorithm Case");
+                        break;
+
+                    case "Intellectual Property Case":
+                        array[counter] = new IntellectualPropertyCase(title, desc, category, "Intellectual Property Case");
+                        break;
+                        
+                    case "Misinformation Case":
+                        array[counter] = new MisinformationCase(title, desc, category, "Misinformation Case");
+                        break;
+                        
+                    case "Privacy Case":
+                        array[counter] = new PrivacyCase(title, desc, category, "Privacy Case");
+                        break;
+                        
+                    default:
+                        System.out.println(type);
+                }
+                counter++;   //after array slot is storing an object increase cunter by one
+            } input.close(); // close scanner
+            
+        //if file isnt found throw exception
+        } catch(FileNotFoundException e) {
+            System.out.println("File not found.");
+        }
     }
 
     /**
@@ -58,6 +88,8 @@ public class Frame1 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(520, 390));
+        setMinimumSize(new java.awt.Dimension(520, 390));
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jLabel1.setText("Ethics Evaluator");
@@ -88,16 +120,15 @@ public class Frame1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(147, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
+                        .addGap(13, 13, 13)
                         .addComponent(jLabel1))
+                    .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
+                        .addGap(58, 58, 58)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,12 +136,12 @@ public class Frame1 extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel5)
                                 .addComponent(jLabel6)))))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGap(143, 143, 143))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(68, 68, 68)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
@@ -124,14 +155,15 @@ public class Frame1 extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        //reset counter and move on to next frame
+        Frame1.counter = 0;
         new Frame2().setVisible(true);
         this.setVisible(false);
         

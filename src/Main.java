@@ -9,11 +9,5 @@
  */
 public class Main {
     public static void main(String args[]) {
-    String [] importantArray = new String [8];
-
-        PrivacyCase privacyCase = new PrivacyCase("Data Leak Case", "Company exposed user emails publicly.", "Personal Data", "1");
-        
-        
-        System.out.println(privacyCase.verdict = new Verdict("Data Leak Case", "Unethical", "User data was shared without consent."));
-    }
+   }
 }

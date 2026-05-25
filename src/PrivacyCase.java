@@ -1,3 +1,5 @@
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -18,9 +20,7 @@ public class PrivacyCase extends EthicsCase{
         this.dataType = dataType;
     }
     
-    /** METHOD: returns the case's dataType
-     * @return String dataType 
-     */
+    // METHOD: getter method
     public String getDataType(){
         return  dataType;
     }
