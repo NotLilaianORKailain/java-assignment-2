@@ -15,11 +15,9 @@ public class Frame3 extends javax.swing.JFrame {
     public Frame3() {
         initComponents();
         
-        //Output results of ethical and unethical counters
         jLabel2.setText("" + Frame1.ethicalcount);
         jLabel3.setText("" + Frame1.unethicalcount);
         
-        //Output results depending on score
         if (Frame1.unethicalcount <= 2){
             jTextArea1.setText("Your profile: The The Optimist\nYou see technology as largely "
             + "a force for good.\nYou tend to trust that companies and developers\nhave good intentions.");
