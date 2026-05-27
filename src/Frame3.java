@@ -50,6 +50,8 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        returnhome = new javax.swing.JButton();
+        compare = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(520, 390));
@@ -86,8 +88,36 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel5.setText("Unethical");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, -1));
 
+        returnhome.setText("Back to Home Page");
+        returnhome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnhomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(returnhome, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, -1, -1));
+
+        compare.setText("Compare Your Answers");
+        compare.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                compareActionPerformed(evt);
+            }
+        });
+        getContentPane().add(compare, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void returnhomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnhomeActionPerformed
+        Frame1.counter = 0;
+        this.setVisible(false);
+        new Frame1().setVisible(true);
+    }//GEN-LAST:event_returnhomeActionPerformed
+
+    private void compareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compareActionPerformed
+        Frame1.counter = 0;
+        this.setVisible(false);
+        new Frame4().setVisible(true);
+    }//GEN-LAST:event_compareActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +156,7 @@ public class Frame3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton compare;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -133,5 +164,6 @@ public class Frame3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton returnhome;
     // End of variables declaration//GEN-END:variables
 }

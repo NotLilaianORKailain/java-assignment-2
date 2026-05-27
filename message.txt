@@ -1,19 +1,4 @@
-1 The Always-On Microphone|ethical||
-2 The Biased Hiring Bot|unethical||
-3 The Deepfake Politician|ethical||
-4 AI Trained on Artist Work|unethical||
-5 Too Personal Advertisement|ethical||
-6 The Moral Highway|unethical||
-7 Overly Restrictive Policy|ethical||
-8 AI as a Profession|unethical||
-1 The Always-On Microphone|ethical||
-2 The Biased Hiring Bot|ethical||
-3 The Deepfake Politician|ethical||
-4 AI Trained on Artist Work|ethical||
-5 Too Personal Advertisement|unethical||
-6 The Moral Highway|unethical||
-7 Overly Restrictive Policy|unethical||
-8 AI as a Profession|unethical||
+
 1 The Always-On Microphone|unethical||
 2 The Biased Hiring Bot|unethical||
 3 The Deepfake Politician|unethical||
@@ -30,3 +15,83 @@
 6 The Moral Highway|ethical||
 7 Overly Restrictive Policy|ethical||
 8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|ethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|unethical||
+2 The Biased Hiring Bot|unethical||
+3 The Deepfake Politician|unethical||
+4 AI Trained on Artist Work|unethical||
+5 Too Personal Advertisement|unethical||
+6 The Moral Highway|unethical||
+7 Overly Restrictive Policy|unethical||
+8 AI as a Profession|unethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|ethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|ethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|ethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|ethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|unethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|unethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|unethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|unethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|unethical||
+5 Too Personal Advertisement|unethical||
+6 The Moral Highway|unethical||
+7 Overly Restrictive Policy|unethical||
+8 AI as a Profession|ethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|unethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|unethical||
+5 Too Personal Advertisement|ethical||
+6 The Moral Highway|unethical||
+7 Overly Restrictive Policy|ethical||
+8 AI as a Profession|unethical||
+1 The Always-On Microphone|ethical||
+2 The Biased Hiring Bot|ethical||
+3 The Deepfake Politician|ethical||
+4 AI Trained on Artist Work|ethical||
+5 Too Personal Advertisement|unethical||
+6 The Moral Highway|unethical||
+7 Overly Restrictive Policy|unethical||
+8 AI as a Profession|unethical||
